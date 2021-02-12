@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@300;400&display=swap');
+
+
+html {
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    font-weight: $normal;
+    line-height: $base-line-height;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
