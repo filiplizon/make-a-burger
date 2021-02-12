@@ -1,6 +1,12 @@
 @import 'partials/helpers/variables';
 @import 'partials/helpers/mixins';
+@import 'partials/helpers/animations';
 
 @import 'partials/basics/reset';
 @import 'partials/basics/typography';
 @import 'partials/basics/base';
+
+@import 'partials/components/button';
+
+@import 'partials/layout/navigation';
+@import 'partials/layout/header';

@@ -1,27 +1,28 @@
-// $color-primary: #69C6EE;
-// $color-secondary: #3781A1;
-// $color-white: #ffffff;
+$color-primary: #D80017;
+$color-secondary: #50091B;
+$color-white: #ffffff;
 
 $base-font-size: 10px;
 $base-line-height: 20px;
-$base-font-family:"Bree Serif";
-$secondary-font-family:"Open Sans";
+$base-font-family:"Open Sans";
+$secondary-font-family:"Bree Serif";
 
-// $font-size-xxs: 1.6rem;
-// $font-size-xs: 2.2rem;
-// $font-size-s: 2.8rem;
-// $font-size-m: 4rem;
-// $font-size-l: 5.4rem;
-// $font-size-xl: 7.5rem;
+$font-size-xxs: 1.6rem;
+$font-size-xs: 2.2rem;
+$font-size-s: 2.8rem;
+$font-size-m: 4rem;
+$font-size-l: 4.5rem;
+$font-size-xl: 7.5rem;
 
 $light: 300;
 $normal: 400;
 $bold: 700;
 
-//Box sizing
+
 $box-sizing: border-box;
 
-//Media query
+$sides-padding: 3%;
+
 $mobile: '(min-width:360px)';
 $tablet: '(min-width:768px)';
 $desktop: '(min-width:1024px)';

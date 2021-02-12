@@ -1,0 +1,123 @@
+.header {
+    background-image: url(/img/header-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0 #{$sides-padding};
+    color: $color-white;
+
+    &__title {
+        padding-top: 12vh;
+        font-size: $font-size-m;
+        text-align: center;
+        font-family: $secondary-font-family;
+        text-transform: uppercase;
+
+        @include screen(mobile) {
+            font-size: $font-size-l;
+        }
+
+        @include screen(tablet) {
+            font-size: $font-size-xl;
+        }
+
+        @include screen(big-desktop) {
+            padding-top: 13vh;
+            font-size: $font-size-l;
+        }
+
+        @include screen(large) {
+            padding-top: 15vh;
+            font-size: $font-size-xl;
+        }
+    }
+
+    &__text {
+        margin-top: 15px;
+        font-size: $font-size-xxs;
+        text-align: center;
+
+        @include screen(mobile) {
+            margin-top: 20px;
+            font-size: $font-size-xs;
+
+            @include screen('(max-height: 641px)') {
+                font-size: $font-size-xxs;
+            }
+        }
+
+        @include screen(tablet) {
+            font-size: $font-size-s;
+        }
+
+        @include screen(desktop) {
+            font-size: $font-size-m;
+        }
+
+        @include screen(big-desktop) {
+            font-size: $font-size-s;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-m;
+        }
+    }
+
+    &__buttons {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 15px;
+
+        @include screen(mobile) {
+            margin-top: 20px;
+        }
+
+        @include screen(tablet) {
+            padding: 0 15%;
+            margin-top: 30px;
+        }
+    }
+
+    &__button {
+
+        &-container {
+            @include screen(big-desktop) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+            }
+
+            &--left {
+                top: 50%;
+                left: 6%;
+            }
+
+            &--right {
+                top: 50%;
+                right: 10%;
+
+                @include screen(large) {
+                    right: 8%;
+                }
+            }
+        }
+
+        &-description {
+            display: none;
+            margin-bottom: 20px;
+            font-size: $font-size-s;
+
+            @include screen(big-desktop) {
+                display: block;
+            }
+
+            @include screen(large) {
+                font-size: $font-size-m;
+            }
+        }
+    }
+}
