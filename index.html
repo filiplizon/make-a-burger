@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make a Burger</title>
-    <link rel="stylesheet" href="/css/main.min.css">
     <script src="https://kit.fontawesome.com/0e52eb4d86.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/main.min.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         </button>
         <ul class="nav__list">
             <li class="nav__item"><a href="#" class="nav__link">O nas</a> </li>
-            <li class="nav__item"><a href="#" class="nav__link">Oferta</a> </li>
+            <li class="nav__item"><a href="#" class="nav__link">Menu</a> </li>
             <li class="nav__item"><a href="#" class="nav__link">Kontakt</a> </li>
         </ul>
         <div class="nav__buttons">
@@ -49,7 +49,7 @@
     </header>
     <section class="about">
         <div class="about__picture-box">
-            <img src="/img/about-img.jpg" alt="" class="about__picture">
+            <img src="../img/about-img.jpg" alt="" class="about__picture">
         </div>
         <div class="about__text">
             <h2 class="about__heading">Burgery najlepszej jakości w najlepszych cenach!</h2>
@@ -58,8 +58,84 @@
                 Iste corporis neque beatae et quibusdam, molestiae in.</p>
             <button class="btn about__btn">Stwórz burgera</button>
         </div>
-
     </section>
+    <main class="menu">
+        <h2 class="menu__heading">Wybierz to co lubisz:</h2>
+        <div class="menu__container">
+            <div class="menu__item">
+                <div class="menu__photo-box"><img src="/img/menu-hamburger.jpg" alt="" class="menu__photo">
+                </div>
+                <h3 class="menu__name">Hamburger</h3>
+                <p class="menu__ingredients">Składniki: 200g wołowiny, sałata, cebula, pikle, pomidor, ser, bekon, sos
+                    autorski</p>
+                <p class="menu__price"><span>19,99</span>zł</p>
+                <div class="menu__quantity-box"><button class="menu__quantity-btn">-</button> <label
+                        for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0"
+                        max="99" value="0"><button class="menu__quantity-btn">+</button></div>
+                <button class="btn menu__btn">Dodaj do koszyka</button>
+            </div>
+            <div class="menu__item">
+                <div class="menu__photo-box"> <img src="/img/menu-chickenburger.jpg" alt="" class="menu__photo">
+                </div>
+                <h3 class="menu__name">Chicken Burger</h3>
+                <p class="menu__ingredients">Składniki: 180g panierowanego kurczaka, sałata, pomidor, ser, sos
+                    majonezowy</p>
+                <p class="menu__price"><span>17,99</span>zł</p>
+                <div class="menu__quantity-box"><button class="menu__quantity-btn">-</button> <label
+                        for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0"
+                        max="99" value="0"><button class="menu__quantity-btn">+</button></div>
+                <button class="btn menu__btn">Dodaj do koszyka</button>
+            </div>
+            <div class="menu__item">
+                <div class="menu__photo-box">
+                    <img src="/img/menu-fishburger.jpg" alt="" class="menu__photo"></div>
+                <h3 class="menu__name">Fish Burger</h3>
+                <p class="menu__ingredients">Składniki: 160g grillowanego dorsza, sałata, pomidor, ogórek, pieczarki,
+                    cebula, sos autorski</p>
+                <p class="menu__price"><span>18,99</span>zł</p>
+                <div class="menu__quantity-box"><button class="menu__quantity-btn">-</button> <label
+                        for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0"
+                        max="99" value="0"><button class="menu__quantity-btn">+</button></div>
+                <button class="btn menu__btn">Dodaj do koszyka</button>
+            </div>
+            <div class="menu__item">
+                <div class="menu__photo-box"> <img src="/img/menu-vege.jpg" alt="" class="menu__photo"></div>
+                <h3 class="menu__name">Vege Burger</h3>
+                <p class="menu__ingredients">Składniki: 160g ciecierzycy, rukola, papryka, pomidor, sos autorski </p>
+                <p class="menu__price"><span>18,99</span>zł</p>
+                <div class="menu__quantity-box"><button class="menu__quantity-btn">-</button> <label
+                        for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0"
+                        max="99" value="0"><button class="menu__quantity-btn">+</button></div>
+                <button class="btn menu__btn">Dodaj do koszyka</button>
+            </div>
+            <div class="menu__item">
+                <div class="menu__photo-box"> <img src="/img/menu-chips.jpg" alt="" class="menu__photo">
+                </div>
+                <h3 class="menu__name">Frytki</h3>
+                <p class="menu__ingredients">Złociste fryteczki podane z wybranym sosem</p>
+                <p class="menu__price"><span>6,99</span>zł</p>
+                <div class="menu__quantity-box"><button class="menu__quantity-btn">-</button> <label
+                        for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0"
+                        max="99" value="0"><button class="menu__quantity-btn">+</button></div>
+                <button class="btn menu__btn">Dodaj do koszyka</button>
+            </div>
+            <div class="menu__item">
+                <div class="menu__photo-box">
+                    <img src="/img/menu-nachos.jpg" alt="" class="menu__photo">
+                </div>
+                <h3 class="menu__name">Nachosy</h3>
+                <p class="menu__ingredients">Chrupiące nachosy podane z wybranym dipem</p>
+                <p class="menu__price"><span>7,99</span>zł</p>
+                <div class="menu__quantity-box"><button class="menu__quantity-btn">-</button> <label
+                        for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0"
+                        max="99" value="0"><button class="menu__quantity-btn">+</button></div>
+                <button class="btn menu__btn">Dodaj do koszyka</button>
+            </div>
+        </div>
+        <div class="menu__btn-container"><button class=" btn menu__btn">Powrót</button><button
+                class=" btn menu__btn">Dalej</button>
+        </div>
+    </main>
 </body>
 
 </html>
