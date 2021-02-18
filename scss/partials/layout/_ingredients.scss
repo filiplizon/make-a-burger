@@ -1,0 +1,162 @@
+.ingredients {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $color-white;
+    padding-top: 8vh;
+
+    &__heading {
+        padding-top: 5%;
+        font-size: $font-size-s;
+        font-family: $secondary-font-family;
+        color: $color-primary;
+
+        @include screen(tablet) {
+            font-size: $font-size-m;
+        }
+
+        @include screen(desktop) {
+            font-size: $font-size-l;
+        }
+
+        @include screen(big-desktop) {
+            padding-top: 0;
+            font-size: $font-size-m;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-l;
+        }
+    }
+
+    &__list {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include screen(tablet) {
+            width: 65%;
+        }
+    }
+
+    &__item {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3%;
+        font-size: $font-size-xxs;
+        border-bottom: 1px solid $color-primary;
+
+        @include screen(tablet) {
+            font-size: $font-size-xs;
+        }
+
+        @include screen(desktop) {
+            font-size: $font-size-s;
+        }
+
+        @include screen(big-desktop) {
+            height: 7vh;
+            font-size: $font-size-xs;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-s;
+        }
+
+        &:nth-child(even) {
+            background-color: darken($color: $color-white, $amount: 2%);
+        }
+    }
+
+    &__price-box {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include screen(tablet) {
+            width: 35%;
+        }
+
+        @include screen(big-desktop) {
+            width: 20%;
+        }
+    }
+
+    &__quantity {
+        width: 50%;
+
+        &-btn {
+            font-size: $font-size-xxs;
+
+            @include screen(mobile) {
+                font-size: $font-size-xs;
+            }
+
+            @include screen(tablet) {
+                font-size: $font-size-s;
+            }
+
+            @include screen(desktop) {
+                font-size: $font-size-m;
+            }
+
+            @include screen(big-desktop) {
+                font-size: $font-size-xs;
+            }
+
+            @include screen(large) {
+                font-size: $font-size-xs;
+            }
+        }
+    }
+
+    &__input {
+        width: 30%;
+        text-align: center;
+
+        @include screen(mobile) {
+            font-size: $font-size-xxs;
+        }
+
+
+        @include screen(tablet) {
+            width: 35%;
+            font-size: $font-size-xs;
+        }
+
+        @include screen(desktop) {
+            font-size: $font-size-s;
+        }
+
+        @include screen(big-desktop) {
+            font-size: $font-size-xxs;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-xs;
+        }
+    }
+
+    &__buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 5%;
+
+        @include screen(tablet) {
+            width: 55%;
+            font-size: $font-size-xs;
+        }
+    }
+}
