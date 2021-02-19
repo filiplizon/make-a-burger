@@ -1,0 +1,141 @@
+.shopping-cart {
+    min-height: 10vh;
+    // height: 20vh;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 8vh;
+    padding: 2% 1%;
+    border-radius: 5px;
+    background-color:
+        rgba($color: $color-white, $alpha: 0.97);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.01), 0 4px 4px rgba(0, 0, 0, 0.02), 0 8px 8px rgba(0, 0, 0, 0.03), 0 18px 18px rgba(0, 0, 0, 0.04), 0 28px 28px rgba(0, 0, 0, 0.05), 0 38px 38px rgba(0, 0, 0, 0.06);
+    z-index: 100;
+    display: none;
+
+    @include screen(big-desktop) {
+        right: 2%;
+        width: 25%;
+        padding-top: 1%;
+
+    }
+
+    &__heading {
+        font-family: $secondary-font-family;
+        font-size: $font-size-xxs;
+        color: $color-primary;
+
+        @include screen(mobile) {
+            font-size: $font-size-xs;
+        }
+
+        @include screen(tablet) {
+            font-size: $font-size-s;
+        }
+
+        @include screen(desktop) {
+            font-size: $font-size-m;
+        }
+
+        @include screen(big-desktop) {
+            font-size: $font-size-s;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-m;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        font-weight: $bold;
+    }
+
+    &__item {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10%;
+        border-bottom: 1px solid $color-primary;
+
+        @include screen(mobile) {
+            font-size: $font-size-xxs;
+        }
+
+        @include screen(tablet) {
+            font-size: $font-size-xs;
+        }
+
+        @include screen(desktop) {
+            font-size: $font-size-s;
+        }
+
+        @include screen(big-desktop) {
+            font-size: $font-size-xxs;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-xs;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+
+            @include screen(tablet) {
+                margin-bottom: 1%;
+            }
+
+            @include screen(big-desktop) {
+                margin-bottom: 5%;
+            }
+        }
+    }
+
+    &__price-box {
+        width: 35%;
+        display: flex;
+        justify-content: space-between;
+
+        @include screen(tablet) {
+            width: 30%;
+        }
+
+        @include screen(big-desktop) {
+            width: 25%;
+        }
+    }
+
+    &__btn {
+        font-size: 1rem;
+
+        @include screen(mobile) {
+            font-size: $font-size-xxs;
+        }
+
+        @include screen(tablet) {
+            font-size: $font-size-xs;
+        }
+
+        @include screen(desktop) {
+            font-size: $font-size-s;
+        }
+
+        @include screen(big-desktop) {
+            font-size: $font-size-xxs;
+        }
+
+        @include screen(large) {
+            font-size: $font-size-xs;
+        }
+    }
+}
