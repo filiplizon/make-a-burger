@@ -17,9 +17,9 @@
             <i class="fas fa-hamburger"></i>
         </button>
         <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a> </li>
             <li class="nav__item"><a href="#" class="nav__link">O nas</a> </li>
             <li class="nav__item"><a href="#" class="nav__link">Menu</a> </li>
-            <li class="nav__item"><a href="#" class="nav__link">Kontakt</a> </li>
         </ul>
         <div class="nav__buttons">
             <button class="nav__shopping-cart">
@@ -35,15 +35,8 @@
     </nav>
     <div class="shopping-cart">
         <p class="shopping-cart__heading">Koszyk</p>
-        <p class="shopping-cart__info">Koszyk aktualnie jest pusty.</p>
-        <!-- <ul class="shopping-cart__list"> -->
-        <!-- <li class="shopping-cart__item">
-                <p class="shopping-cart__name">Hamburger</p>
-                <div class="shopping-cart__price-box">
-                    <p class="shopping-cart__quantity">x2</p>
-                    <p class="shopping-cart__price">18,99</p>
-                </div>
-            </li>
+        <!-- <p class="shopping-cart__info">Koszyk aktualnie jest pusty.</p> -->
+        <ul class="shopping-cart__list">
             <li class="shopping-cart__item">
                 <p class="shopping-cart__name">Hamburger</p>
                 <div class="shopping-cart__price-box">
@@ -64,16 +57,23 @@
                     <p class="shopping-cart__quantity">x2</p>
                     <p class="shopping-cart__price">18,99</p>
                 </div>
-            </li> -->
-        <!-- <li class="shopping-cart__item">
+            </li>
+            <li class="shopping-cart__item">
                 <p class="shopping-cart__name">Hamburger</p>
                 <div class="shopping-cart__price-box">
                     <p class="shopping-cart__quantity">x2</p>
                     <p class="shopping-cart__price">18,99</p>
                 </div>
             </li>
-        </ul> -->
-        <!-- <button class="btn shopping-cart__btn">Do kasy</button> -->
+            <li class="shopping-cart__item">
+                <p class="shopping-cart__name">Hamburger</p>
+                <div class="shopping-cart__price-box">
+                    <p class="shopping-cart__quantity">x2</p>
+                    <p class="shopping-cart__price">18,99</p>
+                </div>
+            </li>
+        </ul>
+        <button class="btn shopping-cart__btn">Do kasy</button>
     </div>
     <header class="header">
         <h1 class="header__title">make a burger</h1>
@@ -291,6 +291,15 @@
         </ul>
         <div class="ingredients__buttons"><button class="btn ingredients__btn">Powrót</button><button
                 class="btn ingredients__btn">Dalej</button></div>
+    </section>
+    <section class="summary">
+        <div class="summary__wrapper">
+            <div class="summary__picture-box"><img src="/img/burger-summary.svg" alt="" class="summary__picture"></div>
+            <h2 class="summary__heading">Dziękujemy!</h2>
+            <p class="summary__summary">Twoje zamówienie powinno być u Ciebie za 00:25:00.</p>
+            <p class="summary__summary">Życzymy smacznego! :)</p>
+            <button class="btn summary__btn">Wyjście</button>
+        </div>
     </section>
     <footer class="footer">
         <div class="footer__wrapper">
