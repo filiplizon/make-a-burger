@@ -16,20 +16,10 @@
             <p class="nav__logo-text">make a burger</p>
             <i class="fas fa-hamburger"></i>
         </button>
-        <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">Home</a> </li>
-            <li class="nav__item"><a href="#" class="nav__link">O nas</a> </li>
-            <li class="nav__item"><a href="#" class="nav__link">Menu</a> </li>
-        </ul>
         <div class="nav__buttons">
             <button class="nav__shopping-cart">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="nav__shopping-cart-quantity"></span>
-            </button>
-            <button class="nav__menu">
-                <span></span>
-                <span></span>
-                <span></span>
             </button>
         </div>
     </nav>
@@ -73,7 +63,7 @@
                 </div>
             </li>
         </ul>
-        <button class="btn shopping-cart__btn">Do kasy</button>
+        <button data-current="shopping-cart" data-next="order" class="btn shopping-cart__btn">Do kasy</button>
     </div>
     <header class="header">
         <h1 class="header__title">make a burger</h1>
@@ -81,11 +71,11 @@
         <div class="header__buttons">
             <div class="header__btn-container header__btn-container--left">
                 <p class="header__btn-description">Dowiedz się więcej</p>
-                <button class="btn header__btn">O nas</button>
+                <button data-current="header" data-next="about" class="btn header__btn">O nas</button>
             </div>
             <div class="header__btn-container header__btn-container--right  ">
                 <p class="header__btn-description">Nie czekaj!</p>
-                <button class="btn header__btn">Stwórz burgera</button>
+                <button data-current="header" data-next="menu" class="btn header__btn">Stwórz burgera</button>
             </div>
         </div>
     </header>
@@ -98,7 +88,7 @@
             <p class="about__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ut totam
                 inventore dolorum dolores magni dolor aspernatur. Magnam, necessitatibus. Distinctio, dolorem explicabo.
                 Iste corporis neque beatae et quibusdam, molestiae in.</p>
-            <button class="btn about__btn">Stwórz burgera</button>
+            <button data-current="about" data-next="menu" class="btn about__btn">Stwórz burgera</button>
         </div>
     </section>
     <main class="menu">
@@ -174,8 +164,9 @@
                 <button class="btn menu__btn">Dodaj do koszyka</button>
             </div>
         </div>
-        <div class="menu__btn-container"><button class=" btn menu__btn">Powrót</button><button
-                class=" btn menu__btn">Dalej</button>
+        <div class="menu__btn-container">
+            <button data-current="menu" data-next="about" class="btn menu__btn">Powrót</button>
+            <button data-current="menu" data-next="order" class="btn menu__btn">Dalej</button>
         </div>
     </main>
     <section class="order">
@@ -194,8 +185,9 @@
                             <p class="order__price">17,99zł</p>
                         </div>
                     </div>
-                    <div class="order__buttons"><button class="btn order__btn">Edytuj</button><button
-                            class="btn order__btn">Usuń</button>
+                    <div class="order__buttons">
+                        <button data-current="menu" data-next="ingredients"
+                            class="btn order__btn">Edytuj</button><button class="btn order__btn">Usuń</button>
                     </div>
                 </li>
                 <li class="order__item">
@@ -210,17 +202,19 @@
                         </div>
                     </div>
 
-                    <div class="order__buttons"><button class="btn order__btn">Edytuj</button><button
-                            class="btn order__btn">Usuń</button>
+                    <div class="order__buttons">
+                        <button data-current="order" data-next="ingredients"
+                            class="btn order__btn">Edytuj</button><button class="btn order__btn">Usuń</button>
                     </div>
                 </li>
             </ul>
             <p class="order__summary">Do zapłaty:<span> 66,99 zł</span></p>
             <div class="order__buttons">
-                <button class="btn order__btn--big">Powrót</button>
-                <button class="btn order__btn--big">Zapłać</button>
+                <button data-current="order" data-next="menu" class="btn order__btn--big">Powrót</button>
+                <button data-current="order" data-next="summary" class="btn order__btn--big">Zapłać</button>
             </div>
         </div>
+
     </section>
     <section class="ingredients">
         <h3 class="ingredients__heading">Wybierz składniki:</h3>
@@ -289,8 +283,9 @@
                 </div>
             </li>
         </ul>
-        <div class="ingredients__buttons"><button class="btn ingredients__btn">Powrót</button><button
-                class="btn ingredients__btn">Dalej</button></div>
+        <div class="ingredients__buttons">
+            <button data-current="ingredients" data-next="order" class="btn ingredients__btn">Dalej</button>
+        </div>
     </section>
     <section class="summary">
         <div class="summary__wrapper">
@@ -298,7 +293,7 @@
             <h2 class="summary__heading">Dziękujemy!</h2>
             <p class="summary__summary">Twoje zamówienie powinno być u Ciebie za 00:25:00.</p>
             <p class="summary__summary">Życzymy smacznego! :)</p>
-            <button class="btn summary__btn">Wyjście</button>
+            <button data-current="summary" data-next="header" class="btn summary__btn">Wyjście</button>
         </div>
     </section>
     <footer class="footer">
@@ -307,6 +302,7 @@
             <i class="fas fa-hamburger"></i>
         </div>
     </footer>
+    <script src="/js/navigation.js"></script>
 </body>
 
 </html>
