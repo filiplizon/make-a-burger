@@ -1,0 +1,47 @@
+.popup {
+    width: 90%;
+    height: 37vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 5px solid $color-primary;
+    background-color: $color-white;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    display: none;
+
+    &__container {
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__icon {
+        height: 40%;
+        width: 38%;
+        background-image: url('/img/sad.png');
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__text {
+        font-size: $font-size-xxs;
+    }
+
+    &__btn {
+        height: auto;
+        padding: 5px 0;
+        background-color: $color-primary;
+        font-size: $font-size-xxs;
+    }
+
+    &--open {
+        display: flex;
+    }
+}
