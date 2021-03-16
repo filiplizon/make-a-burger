@@ -9,8 +9,11 @@
     background-image: radial-gradient($color-primary 1px, $color-white 1px);
     background-size: 20px 20px;
     padding: 8vh 0;
-    z-index: -2;
     display: none;
+
+    &--open {
+        display: flex;
+    }
 
     &__wrapper {
         width: 90%;
@@ -107,24 +110,6 @@
     }
 
     &__btn {
-        @include screen(mobile) {
-            font-size: $font-size-xxs;
-        }
-
-        @include screen(tablet) {
-            font-size: $font-size-s;
-        }
-
-        @include screen(desktop) {
-            font-size: $font-size-m;
-        }
-
-        @include screen(big-desktop) {
-            font-size: $font-size-xxs;
-        }
-
-        @include screen(large) {
-            font-size: $font-size-s;
-        }
+        width: 100%;
     }
 }
