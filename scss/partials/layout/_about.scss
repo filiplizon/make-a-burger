@@ -9,11 +9,13 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    // display: none;
+    padding: 8vh #{$sides-padding};
+    display: none;
 
-    @include screen(mobile) {
-        justify-content: space-around;
+    &--open {
+        display: flex;
     }
 
     &__picture {
@@ -22,7 +24,6 @@
 
         &-box {
             position: relative;
-            margin-top: 20%;
             height: 165px;
             width: 255px;
 
@@ -34,7 +35,6 @@
             @include screen(tablet) {
                 height: 335px;
                 width: 536px;
-                margin-top: 15%;
             }
 
             @include screen(desktop) {
@@ -43,8 +43,9 @@
             }
 
             @include screen(big-desktop) {
-                left: -25%;
-                margin-top: 0;
+                height: 370px;
+                width: 550px;
+                left: -30%;
             }
 
             @include screen(large) {
@@ -68,25 +69,20 @@
                     top: 9%;
                     left: 6%;
                 }
+
+                @include screen(big-desktop) {
+                    height: 103%;
+                    width: 101%;
+                }
             }
         }
     }
 
     &__text {
-        margin-top: 10%;
-        padding: 0 $sides-padding;
-        text-align: center;
-
-
-        @include screen(mobile) {
-            margin-top: 0;
-        }
-
         @include screen(big-desktop) {
-            width: 50%;
+            width: 45%;
             position: absolute;
-            right: 0%;
-            margin-top: 5%;
+            right: 3%;
         }
     }
 
@@ -96,7 +92,6 @@
         line-height: 1.5;
         color: $color-primary;
         text-align: center;
-
 
         @include screen(mobile) {
             font-size: $font-size-s;
@@ -138,39 +133,13 @@
         }
 
         @include screen(big-desktop) {
+            margin-bottom: 0;
             font-size: $font-size-xxs;
             line-height: 2;
         }
 
         @include screen(large) {
             font-size: $font-size-s;
-        }
-    }
-
-    &__btn {
-        margin-top: 5%;
-        background-color: $color-primary;
-        color: $color-white;
-
-        @include screen(mobile) {
-            margin-bottom: 3%;
-            font-size: $font-size-xs;
-
-            @include screen('(min-height: 735px)') {
-                font-size: $font-size-s;
-            }
-        }
-
-        @include screen(desktop) {
-            font-size: $font-size-m;
-        }
-
-        @include screen(big-desktop) {
-            font-size: $font-size-xs;
-        }
-
-        @include screen(large) {
-            font-size: $font-size-m;
         }
     }
 }
