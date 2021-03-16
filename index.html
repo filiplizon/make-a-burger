@@ -16,68 +16,24 @@
             <p class="nav__logo-text">make a burger</p>
             <i class="fas fa-hamburger"></i>
         </button>
-        <div class="nav__buttons">
-            <button class="nav__shopping-cart">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="nav__shopping-cart-quantity"></span>
-            </button>
-        </div>
+        <button class="nav__shopping-cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="nav__shopping-cart-quantity"></span>
+        </button>
     </nav>
     <div class="shopping-cart">
         <p class="shopping-cart__heading">Koszyk</p>
-        <!-- <p class="shopping-cart__info">Koszyk aktualnie jest pusty.</p> -->
+        <p class="shopping-cart__info">Koszyk aktualnie jest pusty.</p>
         <ul class="shopping-cart__list">
-            <li class="shopping-cart__item">
-                <p class="shopping-cart__name">Hamburger</p>
-                <div class="shopping-cart__price-box">
-                    <p class="shopping-cart__quantity">x2</p>
-                    <p class="shopping-cart__price">18,99</p>
-                </div>
-            </li>
-            <li class="shopping-cart__item">
-                <p class="shopping-cart__name">Hamburger</p>
-                <div class="shopping-cart__price-box">
-                    <p class="shopping-cart__quantity">x2</p>
-                    <p class="shopping-cart__price">18,99</p>
-                </div>
-            </li>
-            <li class="shopping-cart__item">
-                <p class="shopping-cart__name">Hamburger</p>
-                <div class="shopping-cart__price-box">
-                    <p class="shopping-cart__quantity">x2</p>
-                    <p class="shopping-cart__price">18,99</p>
-                </div>
-            </li>
-            <li class="shopping-cart__item">
-                <p class="shopping-cart__name">Hamburger</p>
-                <div class="shopping-cart__price-box">
-                    <p class="shopping-cart__quantity">x2</p>
-                    <p class="shopping-cart__price">18,99</p>
-                </div>
-            </li>
-            <li class="shopping-cart__item">
-                <p class="shopping-cart__name">Hamburger</p>
-                <div class="shopping-cart__price-box">
-                    <p class="shopping-cart__quantity">x2</p>
-                    <p class="shopping-cart__price">18,99</p>
-                </div>
-            </li>
         </ul>
         <button data-current="shopping-cart" data-next="order" class="btn shopping-cart__btn">Do kasy</button>
     </div>
     <header class="header">
         <h1 class="header__title">make a burger</h1>
-        <p class="header__text">Zrób swojego ulubionego burgera</p>
-        <div class="header__buttons">
-            <div class="header__btn-container header__btn-container--left">
-                <p class="header__btn-description">Dowiedz się więcej</p>
-                <button data-current="header" data-next="about" class="btn header__btn">O nas</button>
-            </div>
-            <div class="header__btn-container header__btn-container--right  ">
-                <p class="header__btn-description">Nie czekaj!</p>
-                <button data-current="header" data-next="menu" class="btn header__btn">Stwórz burgera</button>
-            </div>
-        </div>
+        <p class="header__text">Zamów swojego ulubionego burgera!</p>
+
+        <button data-current="header" data-next="about" class="btn header__btn">Dalej <i class="fas fa-arrow-right"></i></button>
+
     </header>
     <section class="about">
         <div class="about__picture-box">
@@ -85,136 +41,97 @@
         </div>
         <div class="about__text">
             <h2 class="about__heading">Burgery najlepszej jakości w najlepszych cenach!</h2>
-            <p class="about__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ut totam
-                inventore dolorum dolores magni dolor aspernatur. Magnam, necessitatibus. Distinctio, dolorem explicabo.
-                Iste corporis neque beatae et quibusdam, molestiae in.</p>
-            <button data-current="about" data-next="menu" class="btn about__btn">Stwórz burgera</button>
+            <p class="about__description">Wybierz swój ulubiony rodzaj burgera. Oferta zawiera 4 rodzaje burgerów: Hamburger, Chicken Burger, Fish Burger oraz Vege Burger. Jako dodatek do tego możesz dobrać pyszne fryteczki lub nachosy. Jeśli masz ochotę aby urozmaicić twojego burgera, zachęcamy do dodania dodatkowych składników.</p>
+            <div class="btn-container">
+                <button data-current="about" data-next="header" class="btn about__btn"><i class="fas fa-arrow-left"></i> Powrót</button>
+                <button data-current="about" data-next="menu" class="btn about__btn">Zamów <i class="fas fa-arrow-right"></i></button>
+            </div>
         </div>
     </section>
     <main class="menu">
         <h2 class="menu__heading">Wybierz to co lubisz:</h2>
         <div class="menu__container">
             <div class="menu__item">
-                <div class="menu__photo-box"><img src="/img/menu-hamburger.jpg" alt="" class="menu__photo">
+                <div class="menu__photo-box"><img src="/img/menu-Hamburger.jpg" alt="" class="menu__photo">
                 </div>
                 <h3 class="menu__name">Hamburger</h3>
                 <p class="menu__ingredients">Składniki: 200g wołowiny, sałata, cebula, pikle, pomidor, ser, bekon, sos
                     autorski</p>
                 <p class="menu__price"><span>19,99</span>zł</p>
-                <div class="menu__quantity-box"><button class="menu__quantity-btn">-</button> <label
-                        for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0"
-                        max="99" value="0"><button class="menu__quantity-btn">+</button></div>
-                <button class="btn menu__btn">Dodaj do koszyka</button>
+                <div class="menu__quantity-box"><button class="menu__quantity-btn" name="menu">-</button> <label for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0" max="99" value="1" name="Hamburger"><button class="menu__quantity-btn" name="menu">+</button></div>
+                <button class="btn menu__btn" value="Hamburger" data-price="19.99">Dodaj do koszyka</button>
             </div>
             <div class="menu__item">
-                <div class="menu__photo-box"> <img src="/img/menu-chickenburger.jpg" alt="" class="menu__photo">
+                <div class="menu__photo-box"> <img src="/img/menu-Chicken Burger.jpg" alt="" class="menu__photo">
                 </div>
                 <h3 class="menu__name">Chicken Burger</h3>
                 <p class="menu__ingredients">Składniki: 180g panierowanego kurczaka, sałata, pomidor, ser, sos
                     majonezowy</p>
                 <p class="menu__price"><span>17,99</span>zł</p>
-                <div class="menu__quantity-box"><button class="menu__quantity-btn">-</button> <label
-                        for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0"
-                        max="99" value="0"><button class="menu__quantity-btn">+</button></div>
-                <button class="btn menu__btn">Dodaj do koszyka</button>
+                <div class="menu__quantity-box"><button class="menu__quantity-btn" name="menu">-</button> <label for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0" max="99" value="1" name="Chicken Burger"><button class="menu__quantity-btn" name="menu">+</button></div>
+                <button class="btn menu__btn" value="Chicken Burger" data-price="17.99">Dodaj do koszyka</button>
             </div>
             <div class="menu__item">
                 <div class="menu__photo-box">
-                    <img src="/img/menu-fishburger.jpg" alt="" class="menu__photo"></div>
+                    <img src="/img/menu-Fish Burger.jpg" alt="" class="menu__photo"></div>
                 <h3 class="menu__name">Fish Burger</h3>
                 <p class="menu__ingredients">Składniki: 160g grillowanego dorsza, sałata, pomidor, ogórek, pieczarki,
                     cebula, sos autorski</p>
                 <p class="menu__price"><span>18,99</span>zł</p>
-                <div class="menu__quantity-box"><button class="menu__quantity-btn">-</button> <label
-                        for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0"
-                        max="99" value="0"><button class="menu__quantity-btn">+</button></div>
-                <button class="btn menu__btn">Dodaj do koszyka</button>
+                <div class="menu__quantity-box"><button class="menu__quantity-btn" name="menu">-</button> <label for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0" max="99" value="1" name="Fish Burger"><button class="menu__quantity-btn" name="menu">+</button></div>
+                <button class="btn menu__btn" value="Fish Burger" data-price="18.99">Dodaj do koszyka</button>
             </div>
             <div class="menu__item">
-                <div class="menu__photo-box"> <img src="/img/menu-vege.jpg" alt="" class="menu__photo"></div>
+                <div class="menu__photo-box"> <img src="/img/menu-Vege Burger.jpg" alt="" class="menu__photo"></div>
                 <h3 class="menu__name">Vege Burger</h3>
                 <p class="menu__ingredients">Składniki: 160g ciecierzycy, rukola, papryka, pomidor, sos autorski </p>
                 <p class="menu__price"><span>18,99</span>zł</p>
-                <div class="menu__quantity-box"><button class="menu__quantity-btn">-</button> <label
-                        for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0"
-                        max="99" value="0"><button class="menu__quantity-btn">+</button></div>
-                <button class="btn menu__btn">Dodaj do koszyka</button>
+                <div class="menu__quantity-box"><button class="menu__quantity-btn" name="menu">-</button> <label for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0" max="99" value="1" name="Vege Burger"><button class="menu__quantity-btn" name="menu">+</button></div>
+                <button class="btn menu__btn" value="Vege Burger" data-price="18.99">Dodaj do koszyka</button>
             </div>
             <div class="menu__item">
-                <div class="menu__photo-box"> <img src="/img/menu-chips.jpg" alt="" class="menu__photo">
+                <div class="menu__photo-box"> <img src="/img/menu-Chips.jpg" alt="" class="menu__photo">
                 </div>
                 <h3 class="menu__name">Frytki</h3>
                 <p class="menu__ingredients">Złociste fryteczki podane z wybranym sosem</p>
                 <p class="menu__price"><span>6,99</span>zł</p>
-                <div class="menu__quantity-box"><button class="menu__quantity-btn">-</button> <label
-                        for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0"
-                        max="99" value="0"><button class="menu__quantity-btn">+</button></div>
-                <button class="btn menu__btn">Dodaj do koszyka</button>
+                <div class="menu__quantity-box"><button class="menu__quantity-btn" name="menu">-</button> <label for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0" max="99" value="1" name="Chips"><button class="menu__quantity-btn" name="menu">+</button></div>
+                <button class="btn menu__btn" value="Chips" data-price="6.99">Dodaj do koszyka</button>
             </div>
             <div class="menu__item">
                 <div class="menu__photo-box">
-                    <img src="/img/menu-nachos.jpg" alt="" class="menu__photo">
+                    <img src="/img/menu-Nachos.jpg" alt="" class="menu__photo">
                 </div>
                 <h3 class="menu__name">Nachosy</h3>
                 <p class="menu__ingredients">Chrupiące nachosy podane z wybranym dipem</p>
                 <p class="menu__price"><span>7,99</span>zł</p>
-                <div class="menu__quantity-box"><button class="menu__quantity-btn">-</button> <label
-                        for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0"
-                        max="99" value="0"><button class="menu__quantity-btn">+</button></div>
-                <button class="btn menu__btn">Dodaj do koszyka</button>
+                <div class="menu__quantity-box"><button class="menu__quantity-btn" name="menu">-</button> <label for="quantity"></label><input class="menu__quantity" id="quantity" type="number" min="0" max="99" value="1" name="Nachos"><button class="menu__quantity-btn" name="menu">+</button></div>
+                <button class="btn menu__btn" value="Nachos" data-price="7.99">Dodaj do koszyka</button>
             </div>
         </div>
-        <div class="menu__btn-container">
-            <button data-current="menu" data-next="about" class="btn menu__btn">Powrót</button>
-            <button data-current="menu" data-next="order" class="btn menu__btn">Dalej</button>
+        <div class="btn-container">
+            <button data-current="menu" data-next="about" class="btn menu__nav-btn"><i class="fas fa-arrow-left"></i> Powrót</button>
+            <button data-current="menu" data-next="order" class="btn menu__nav-btn">Do kasy <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="popup">
+            <div class="popup__container">
+                <div class="popup__icon"></div>
+                <p class="popup__text">Nie dodałeś nic do koszyka.</p>
+                <button class="btn popup__btn">Zamknij</button>
+            </div>
         </div>
     </main>
     <section class="order">
         <h2 class="order__heading">Twoje zamówienie:</h2>
         <div class="order__container">
-
             <ul class="order__list">
-                <li class="order__item">
-                    <div class="order__product-box">
-                        <div class="order__product">
-                            <div class="order__photo"><img src="/img/menu-chickenburger.jpg" alt=""></div>
-                            <p class="order__name">Chicken Burger</p>
-                        </div>
-                        <div class="order__price-box">
-                            <p class="order__quantity">x2</p>
-                            <p class="order__price">17,99zł</p>
-                        </div>
-                    </div>
-                    <div class="order__buttons">
-                        <button data-current="menu" data-next="ingredients"
-                            class="btn order__btn">Edytuj</button><button class="btn order__btn">Usuń</button>
-                    </div>
-                </li>
-                <li class="order__item">
-                    <div class="order__product-box">
-                        <div class="order__product">
-                            <div class="order__photo"><img src="/img/menu-chickenburger.jpg" alt=""></div>
-                            <p class="order__name">Chicken Burger</p>
-                        </div>
-                        <div class="order__price-box">
-                            <p class="order__quantity">x2</p>
-                            <p class="order__price">17,99zł</p>
-                        </div>
-                    </div>
-
-                    <div class="order__buttons">
-                        <button data-current="order" data-next="ingredients"
-                            class="btn order__btn">Edytuj</button><button class="btn order__btn">Usuń</button>
-                    </div>
-                </li>
             </ul>
-            <p class="order__summary">Do zapłaty:<span> 66,99 zł</span></p>
-            <div class="order__buttons">
-                <button data-current="order" data-next="menu" class="btn order__btn--big">Powrót</button>
-                <button data-current="order" data-next="summary" class="btn order__btn--big">Zapłać</button>
+            <p class="order__summary">Do zapłaty: <span class="order__summary-price"></span>zł</p>
+            <div class="btn-container order__btn-container">
+                <button data-current="order" data-next="menu" class="btn order__btn--big"><i class="fas fa-arrow-left"></i> Powrót</button>
+                <button data-current="order" data-next="summary" class="btn order__btn--big">Zapłać <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
-
     </section>
     <section class="ingredients">
         <h3 class="ingredients__heading">Wybierz składniki:</h3>
@@ -222,87 +139,72 @@
             <li class="ingredients__item">
                 <p class="ingredients__name">Pomidor</p>
                 <div class="ingredients__price-box">
-                    <div class="ingredients__quantity"><button class="ingredients__quantity-btn">-</button><input
-                            type="number" value="0" name="" id="" class="ingredients__input"><button
-                            class="ingredients__quantity-btn">+</button></div>
-                    <p class="ingredientns__price">2.99zł</p>
+                    <div class="ingredients__quantity-box"><button class="ingredients__quantity-btn" name="ingredients">-</button><input type="number" value="0" name="tomato" id="" class="ingredients__quantity"><button class="ingredients__quantity-btn" name="ingredients">+</button></div>
+                    <p class="ingredientns__price">1.99zł</p>
                 </div>
             </li>
             <li class="ingredients__item">
                 <p class="ingredients__name">Ogórek</p>
                 <div class="ingredients__price-box">
-                    <div class="ingredients__quantity"><button class="ingredients__quantity-btn">-</button><input
-                            type="number" value="0" name="" id="" class="ingredients__input"><button
-                            class="ingredients__quantity-btn">+</button></div>
-                    <p class="ingredientns__price">2.99zł</p>
+                    <div class="ingredients__quantity-box"><button class="ingredients__quantity-btn" name="ingredients">-</button><input type="number" value="0" name="cucumber" id="" class="ingredients__quantity"><button class="ingredients__quantity-btn" name="ingredients">+</button></div>
+                    <p class="ingredientns__price">1.99zł</p>
                 </div>
             </li>
             <li class="ingredients__item">
                 <p class="ingredients__name">Pikle</p>
                 <div class="ingredients__price-box">
-                    <div class="ingredients__quantity"><button class="ingredients__quantity-btn">-</button><input
-                            type="number" value="0" name="" id="" class="ingredients__input"><button
-                            class="ingredients__quantity-btn">+</button></div>
-                    <p class="ingredientns__price">2.99zł</p>
+                    <div class="ingredients__quantity-box"><button class="ingredients__quantity-btn" name="ingredients">-</button><input type="number" value="0" name="pickles" id="" class="ingredients__quantity"><button class="ingredients__quantity-btn" name="ingredients">+</button></div>
+                    <p class="ingredientns__price">1.99zł</p>
                 </div>
             </li>
             <li class="ingredients__item">
                 <p class="ingredients__name">Papryka</p>
                 <div class="ingredients__price-box">
-                    <div class="ingredients__quantity"><button class="ingredients__quantity-btn">-</button><input
-                            type="number" value="0" name="" id="" class="ingredients__input"><button
-                            class="ingredients__quantity-btn">+</button></div>
-                    <p class="ingredientns__price">2.99zł</p>
+                    <div class="ingredients__quantity-box"><button class="ingredients__quantity-btn" name="ingredients">-</button><input type="number" value="0" name="pepper" id="" class="ingredients__quantity"><button class="ingredients__quantity-btn" name="ingredients">+</button></div>
+                    <p class="ingredientns__price">1.99zł</p>
                 </div>
             </li>
             <li class="ingredients__item">
                 <p class="ingredients__name">Bekon</p>
                 <div class="ingredients__price-box">
-                    <div class="ingredients__quantity"><button class="ingredients__quantity-btn">-</button><input
-                            type="number" value="0" name="" id="" class="ingredients__input"><button
-                            class="ingredients__quantity-btn">+</button></div>
+                    <div class="ingredients__quantity-box"><button class="ingredients__quantity-btn" name="ingredients">-</button><input type="number" value="0" name="bacon" id="" class="ingredients__quantity"><button class="ingredients__quantity-btn" name="ingredients">+</button></div>
                     <p class="ingredientns__price">2.99zł</p>
                 </div>
             </li>
             <li class="ingredients__item">
                 <p class="ingredients__name">Ser</p>
                 <div class="ingredients__price-box">
-                    <div class="ingredients__quantity"><button class="ingredients__quantity-btn">-</button><input
-                            type="number" value="0" name="" id="" class="ingredients__input"><button
-                            class="ingredients__quantity-btn">+</button></div>
-                    <p class="ingredientns__price">2.99zł</p>
-                </div>
-            </li>
-            <li class="ingredients__item">
-                <p class="ingredients__name">Mięsko</p>
-                <div class="ingredients__price-box">
-                    <div class="ingredients__quantity"><button class="ingredients__quantity-btn">-</button><input
-                            type="number" value="0" name="" id="" class="ingredients__input"><button
-                            class="ingredients__quantity-btn">+</button></div>
+                    <div class="ingredients__quantity-box"><button class="ingredients__quantity-btn" name="ingredients">-</button><input type="number" value="0" name="cheese" id="" class="ingredients__quantity"><button class="ingredients__quantity-btn" name="ingredients">+</button></div>
                     <p class="ingredientns__price">2.99zł</p>
                 </div>
             </li>
         </ul>
-        <div class="ingredients__buttons">
-            <button data-current="ingredients" data-next="order" class="btn ingredients__btn">Dalej</button>
+        <div class="ingredients__dots-container">
         </div>
+        <div class="ingredients__arrows-box">
+            <button class="ingredients__arrow ingredients__arrow--left"><i class="fas fa-arrow-left"></i></button>
+            <button class="ingredients__arrow ingredients__arrow--right"><i class="fas fa-arrow-right"></i></button>
+        </div>
+        <p class="ingredients__summary">Cena dodanych składników: <span class="ingredients__total-price">0.00</span> zł</p>
+        <div class="btn-container">
+            <button data-current="ingredients" data-next="order" class="btn ingredients__btn">Dalej</button></div>
     </section>
     <section class="summary">
         <div class="summary__wrapper">
             <div class="summary__picture-box"><img src="/img/burger-summary.svg" alt="" class="summary__picture"></div>
             <h2 class="summary__heading">Dziękujemy!</h2>
-            <p class="summary__summary">Twoje zamówienie powinno być u Ciebie za 00:25:00.</p>
+            <p class="summary__summary">Twoje zamówienie powinno być u Ciebie za <span class="summary__delivery-time">.</p>
             <p class="summary__summary">Życzymy smacznego! :)</p>
-            <button data-current="summary" data-next="header" class="btn summary__btn">Wyjście</button>
         </div>
+        <div class="btn-container"> <button data-current="summary" data-next="header" class="btn summary__btn">Wyjście</button></div>
     </section>
-    <footer class="footer">
-        <div class="footer__wrapper">
-            <p class="footer__text">make a burger</p>
-            <i class="fas fa-hamburger"></i>
-        </div>
-    </footer>
-    <script src="/js/navigation.js"></script>
+    <script src="/js/globalVariables.js"></script>
+    <script src="/js/Navigation.js"></script>
+    <script src="/js/Item.js"></script>
+    <script src="/js/ShoppingCart.js"></script>
+    <script src="/js/Orders.js"></script>
+    <script src="/js/Summary.js"></script>
+    <script src="/js/App.js"></script>
 </body>
 
 </html>
