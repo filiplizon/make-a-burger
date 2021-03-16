@@ -79,16 +79,12 @@
         margin-top: 15px;
         background-color: $color-white;
         color: $color-primary;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         -o-transform: translateX(-50%);
+        transition: transform .2s;
 
         @include screen(tablet) {
             width: 20%;
@@ -102,6 +98,15 @@
 
         @include screen(large) {
             margin-top: 30px;
+        }
+
+        &:hover {
+            background-color: $color-white;
+            transform: translateX(-50%) scale(1.05);
+            -webkit-transform: translateX(-50%) scale(1.05);
+            -moz-transform: translateX(-50%) scale(1.05);
+            -ms-transform: translateX(-50%) scale(1.05);
+            -o-transform: translateX(-50%) scale(1.05);
         }
     }
 }
