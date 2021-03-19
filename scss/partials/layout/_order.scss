@@ -134,18 +134,22 @@
         background-color: $color-primary;
 
         @include screen(mobile) {
+            width: 35%;
             font-size: $font-size-xxs;
         }
 
         @include screen(tablet) {
+            width: 25%;
             font-size: $font-size-xs;
         }
 
         @include screen(desktop) {
+            width: 30%;
             font-size: $font-size-s;
         }
 
         @include screen(big-desktop) {
+            width: 15%;
             font-size: $font-size-xxs;
         }
 
