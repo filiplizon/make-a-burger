@@ -1,61 +1,52 @@
-const buttons = document.querySelectorAll('.btn');
-const links = document.querySelectorAll('.nav__item');
-const logo = document.querySelector('.nav__logo');
-const shoppingCart = document.querySelector('.shopping-cart');
-const shoppingCartBtn = document.querySelector('.nav__shopping-cart');
-const allLinks = [...buttons, ...links];
+class Navigation {
 
-let previousSections = [];
+    setShoppingCartVisibility() {
+        shoppingCart.classList.toggle('shopping-cart--open');
+    }
 
-allLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        moveToNextSection(link);
-    })
-})
-
-const moveToNextSection = (section) => {
-    const nextSectionName = section.dataset.next;
-    const currentSectionName = section.dataset.current;
-    if (nextSectionName) {
-        if (!previousSections.includes(currentSectionName)) {
-            previousSections.push(currentSectionName);
+    hideCartByClickingOutside(e) {
+        if (e.target != shoppingCart && e.target != shoppingCartBtn && e.target !== shoppingCartBtn.firstElementChild) {
+            shoppingCart.classList.remove('shopping-cart--open');
         }
-        if (!previousSections.includes(nextSectionName)) {
-            previousSections.push(nextSectionName)
+    }
+
+    moveToNextSection(nextSection, currentSection, e) {
+        if (nextSection) {
+            if (!previousSections.includes(currentSection)) {
+                previousSections.push(currentSection);
+            }
+            if (!previousSections.includes(nextSection)) {
+                previousSections.push(nextSection)
+            }
+            this.closePreviousSections(previousSections);
+            this.openNextSection(nextSection);
         }
-        closePreviousSections(previousSections);
-        openNextSection(nextSectionName);
+    }
+
+    closePreviousSections(previousSections) {
+        previousSections.forEach(section => {
+            const previousSection = document.querySelector(`.${section}`);
+            previousSection.classList.remove(`${section}--open`);
+        })
+    }
+
+    openNextSection(next) {
+        const nextState = document.querySelector(`.${next}`);
+        nextState.classList.add(`${next}--open`);
+        if (next === 'about') {
+            cart.closePopUp();
+        }
+        if (next === 'order') {
+            cart.updateCart();
+            cart.setTotalPrice();
+        }
+        if (next === 'summary') {
+            cartBtn.style.display = 'none';
+            cart.items = [];
+            cart.emptyCart();
+            summary.setTime();
+        }
     }
 }
 
-const openNextSection = next => {
-    const nextState = document.querySelector(`.${next}`);
-    nextState.classList.add(`${next}--open`);
-}
-
-const closePreviousSections = previousSections => {
-    previousSections.forEach(section => {
-        const previousSection = document.querySelector(`.${section}`);
-        previousSection.classList.remove(`${section}--open`);
-    })
-}
-
-const setShoppingCartVisibility = () => {
-    shoppingCart.classList.toggle('shopping-cart--open');
-}
-
-const hideMenuByClickingOutside = (e) => {
-    if (e.target != shoppingCart && e.target != shoppingCartBtn && e.target !== shoppingCartBtn.firstElementChild) {
-        shoppingCart.classList.remove('shopping-cart--open');
-    }
-}
-
-logo.addEventListener('click', () => {
-    closePreviousSections(previousSections)
-});
-
-shoppingCartBtn.addEventListener('click', setShoppingCartVisibility);
-
-document.body.addEventListener('click', e => {
-    hideMenuByClickingOutside(e);
-});
+const nav = new Navigation();
