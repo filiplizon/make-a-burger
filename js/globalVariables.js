@@ -1,3 +1,4 @@
+let header;
 let shoppingCart;
 let shoppingCartBtn;
 let shoppingCartList;

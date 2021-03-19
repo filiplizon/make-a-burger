@@ -54,7 +54,7 @@ class ShoppingCart {
             listItem.setAttribute('data-item', `${item.name}`);
             listItem.innerHTML = ` <div class="order__product-box">
         <div class="order__product">
-            <div class="order__photo-box"><img src="/img/menu-${item.name}.jpg" alt="${item.name}" class="order__photo"></div>
+            <div class="order__photo-box"><img src="img/menu-${item.name}.jpg" alt="${item.name}" class="order__photo"></div>
             <p class="order__name">${item.name}</p>
         </div>
         <div class="order__price-box">

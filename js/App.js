@@ -1,6 +1,7 @@
 class App {
 
     prepareDOMElements() {
+        header = document.querySelector('.header');
         shoppingCartList = document.querySelector('.shopping-cart__list');
         shoppingCartInfo = document.querySelector('.shopping-cart__info');
         cartBtn = document.querySelector('.shopping-cart__btn');
@@ -24,6 +25,7 @@ class App {
     }
 
     prepareDOMEvents() {
+        header.style.backgroundImage = 'url(img/header-bg.jpg)';
 
         allButtons.forEach(btn => {
             btn.addEventListener('click', (e) => {
