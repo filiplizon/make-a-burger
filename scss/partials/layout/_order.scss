@@ -84,8 +84,10 @@
     }
 
     &__item {
+        height: 17vh;
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
         margin-bottom: 5%;
         padding-bottom: 2%;
         border-bottom: 2px solid $color-primary;
@@ -129,8 +131,9 @@
 
     &__btn {
         width: 30%;
-        font-size: 1rem;
         padding: 5px 5px;
+        border-radius: 20px;
+        font-size: 1rem;
         background-color: $color-primary;
 
         @include screen(mobile) {
@@ -139,17 +142,16 @@
         }
 
         @include screen(tablet) {
-            width: 25%;
+            width: 30%;
             font-size: $font-size-xs;
         }
 
         @include screen(desktop) {
-            width: 30%;
             font-size: $font-size-s;
         }
 
         @include screen(big-desktop) {
-            width: 15%;
+            width: 30%;
             font-size: $font-size-xxs;
         }
 
@@ -162,6 +164,16 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
+
+             @include screen(tablet) {
+                 width: 90%;
+                 margin: 0 auto;
+             }
+
+             @include screen(big-desktop) {
+                 width: 50%;
+                 margin-bottom: 20px;
+             }
         }
     }
 
@@ -189,7 +201,7 @@
         position: absolute;
         bottom: -165%;
         right: 0;
-        text-align: center;
+        text-align: right;
 
         @include screen(mobile) {
             font-size: $font-size-xxs;
