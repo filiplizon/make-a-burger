@@ -1,5 +1,4 @@
 .shopping-cart {
-    // min-height: 10vh;
     width: 65%;
     position: fixed;
     top: 0;
@@ -9,7 +8,7 @@
     align-items: center;
     justify-content: space-around;
     margin-top: 8vh;
-    padding: 1% 2%;
+    padding: 1% 2% 0;
     border-radius: 5px;
     font-size: $font-size-xxs;
     background-color:
@@ -61,6 +60,7 @@
         }
 
         @include screen(large) {
+            margin-bottom: 4%;
             font-size: $font-size-m;
         }
     }
@@ -143,8 +143,9 @@
 
     &__btn {
         display: none;
-        margin: 5% 0 0;
+        margin: 5% 0;
         padding: 5px 0;
+        border-radius: 20px;
         font-size: 1rem;
         background-color: $color-primary;
         color: $color-white;
